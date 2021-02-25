@@ -793,6 +793,8 @@ Error message and password prompt
 
 <li>AutoHotkey</li>
 
+<li>Batch script 개인화</li>
+
 <li>Caris</li>
 
 <li>Caris GIS 환경변수 설정</li>
@@ -14204,7 +14206,7 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200430065700800" modified="20200430071439378" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/plugins/tiddlywiki/menubar/config</pre>
 </div>
-<div created="20200424052223382" modified="20210225013154195" title="$:/state/textfold">
+<div created="20200424052223382" modified="20210225034542191" title="$:/state/textfold">
 <pre>hide</pre>
 </div>
 <div created="20200512080140210" modified="20200514064823409" title="$:/state/textfold_qgis3">
@@ -14276,7 +14278,7 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200424042112289" modified="20200427114229904" title="$:/state/toc/Contents-Scripting--1240660657">
 <pre>open</pre>
 </div>
-<div created="20200430073107498" modified="20210220110426230" title="$:/state/toc/Contents-Scripting-1637712383">
+<div created="20200430073107498" modified="20210225034225890" title="$:/state/toc/Contents-Scripting-1637712383">
 <pre>open</pre>
 </div>
 <div created="20200425053213560" modified="20210219014010775" title="$:/state/toc/Contents-Scripting-263827834">
@@ -14474,7 +14476,7 @@ very-muted-foreground: #2d3038</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210225012901559" list="Notice Contents" modified="20210225012919217" title="$:/StoryList">
+<div list="Notice Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200430071506327" modified="20200501105137873" tags="$:/tags/TopLeftBar" title="$:/tags/TopLeftBar">
@@ -14537,11 +14539,11 @@ NoK ^^(0.1)^^
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1904&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;968&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -14550,7 +14552,7 @@ NoK ^^(0.1)^^
     }
 }</pre>
 </div>
-<div created="20200424025906543" modified="20210224051916413" title="$:/temp/menubarsearch">
+<div created="20200424025906543" modified="20210225040454471" title="$:/temp/menubarsearch">
 <pre></pre>
 </div>
 <div created="20200418095158068" modified="20200424070847571" title="$:/temp/NewTagName">
@@ -15512,8 +15514,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200430065429707" modified="20200430065429707" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
-<div created="20200418104546622" modified="20210224060146653" title="$:/temp/toc/selectedTiddler">
-<pre>HPD Project 생성 및 상태 변경</pre>
+<div created="20200418104546622" modified="20210225040505550" title="$:/temp/toc/selectedTiddler">
+<pre>Batch script 개인화</pre>
 </div>
 <div created="20200418082138691" modified="20200427044437521" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -16511,6 +16513,34 @@ net use \\192.168.17.97\IPC$ /d  -- 원격 연결 IPC 제거
 <pre>&lt;&lt;점선&gt;&gt;
 
 {{{ [tag[AutoHotkey]sort[tor]] }}}</pre>
+</div>
+<div created="20210225034240646" modified="20210225040412953" tags="Scripting" title="Batch script 개인화" tor="0">
+<pre>!!!! 개인 스크립트 작성 요령
+&lt;&lt;점선&gt;&gt;
+
+* PATH ?
+&lt;&lt;&lt;
+NoK 설치 시 기본적으로 PATH를 등록하도록 설정되어 있습니다. &lt;br&gt;
+NoK을 통해 배포되는 Script를 수정해서 사용하시는 경우
+&lt;pre&gt;{NoK_설치폴더}\Bin\''Private''
+
+예) C:\NoK\Bin\Private&lt;/pre&gt;
+Private 폴더에 복사해서 수정하고 사용하세요.&lt;br&gt;
+
+&lt;&lt;더보기 &quot;NoK을 재 설치하는 경우 Private폴더는 그대로 유지됩니다. &quot;&gt;&gt;
+
+&lt;&lt;&lt;
+
+&lt;&lt;점선&gt;&gt;
+
+* 배치 스크립트 작성하기 
+&lt;&lt;&lt;
+&lt;&lt;더보기 &quot;아주 아주 먼 옛날 작성된 파일입니다.....&quot;&gt;&gt;
+배치파일 작성 가이드 &lt;$button message=&quot;tm-open-external-window&quot; 
+param=&quot;https://drive.google.com/file/d/1pr_iJFyWCIIRrzdktAqgvjHajYBHst58/view?usp=sharing&quot;&gt; Download &lt;/$button&gt;
+
+-- i. 구글 드라이브 미리보기에서는 .hwp 파일이 정상적으로 보이지 않습니다. 다운로드 해서 보세요.  
+&lt;&lt;&lt;</pre>
 </div>
 <div color="#341e7b" created="20180127062734662" icon="$:/core/images/picture" modified="20200427121030203" tags="Contents" title="Caris" toc-link="no">
 <pre>&lt;&lt;점선&gt;&gt;
