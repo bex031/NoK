@@ -777,6 +777,8 @@ Error message and password prompt
 
 <li>2021-02-25 15:12:00</li>
 
+<li>2021-03-11 13:21:13</li>
+
 <li>수심 오류 찾기</li>
 
 <li>위키 문법</li>
@@ -14208,14 +14210,14 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200430065700800" modified="20200430071439378" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/plugins/tiddlywiki/menubar/config</pre>
 </div>
-<div created="20200424052223382" modified="20210225061331550" title="$:/state/textfold">
+<div created="20200424052223382" modified="20210311051033925" title="$:/state/textfold">
 <pre>hide</pre>
 </div>
 <div created="20200512080140210" modified="20200514064823409" title="$:/state/textfold_qgis3">
 <pre>hide</pre>
 </div>
-<div created="20200508043612719" modified="20191101063322151" title="$:/state/toc/Contents-AutoHotkey-1637712383">
-<pre>open</pre>
+<div created="20200508043612719" modified="20210311050051782" title="$:/state/toc/Contents-AutoHotkey-1637712383">
+<pre>close</pre>
 </div>
 <div created="20200508044418238" modified="20200508072425419" title="$:/state/toc/Contents-AutoHotkey-263827834">
 <pre>close</pre>
@@ -14244,7 +14246,7 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200427052833934" modified="20200427052833934" title="$:/state/toc/Contents-ETC--1248118275">
 <pre>open</pre>
 </div>
-<div created="20200418111932244" modified="20210224022426360" title="$:/state/toc/Contents-ETC-1637712383">
+<div created="20200418111932244" modified="20210311045700098" title="$:/state/toc/Contents-ETC-1637712383">
 <pre>close</pre>
 </div>
 <div created="20200423073514067" modified="20210219014011407" title="$:/state/toc/Contents-ETC-263827834">
@@ -14554,7 +14556,7 @@ NoK ^^(0.1)^^
     }
 }</pre>
 </div>
-<div created="20200424025906543" modified="20210225053523962" title="$:/temp/menubarsearch">
+<div created="20200424025906543" modified="20210311051049631" title="$:/temp/menubarsearch">
 <pre></pre>
 </div>
 <div created="20200418095158068" modified="20200424070847571" title="$:/temp/NewTagName">
@@ -15516,7 +15518,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200430065429707" modified="20200430065429707" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
-<div created="20200418104546622" modified="20210225053520863" title="$:/temp/toc/selectedTiddler">
+<div created="20200418104546622" modified="20210311051040198" title="$:/temp/toc/selectedTiddler">
 <pre>Batch script 개인화</pre>
 </div>
 <div created="20200418082138691" modified="20200427044437521" title="$:/theme">
@@ -16112,35 +16114,37 @@ Project 생성시 필요한 사용자 ID를 조회하기 위한 SQL 문서 추�
 &lt;/ul&gt;
 &lt;/ol&gt;</pre>
 </div>
-<div created="20191101063301327" modified="20210225052453192" tags="HPD" title="수심 오류 찾기" tor="0">
+<div created="20210311042115164" description="CompareRaw 수정" modified="20210311050031271" tags="Notice" title="2021-03-11 13:21:13">
+<pre>&lt;ol type=&quot;i&quot;&gt;
+&lt;li&gt;CompareRaw 수정&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;CompareRaw.py&lt;/li&gt;
+&lt;li&gt;문제상황 : 모든 수심에 대해 오류가 발생&lt;/li&gt;
+&lt;li&gt;발생이유 : 위도 경도 수심의 구분자로 쓰이는 공백문자( ' ' )가 여러 번 반복 입력되어 있는 메타파일&lt;/li&gt;
+&lt;li&gt;수정내용 : 메타파일 읽는 부분 정규식을 수정함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;문서 일부 수정&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;NoK에서 사용하는 QGIS, Python, PowerShell 설정관련 설명을 전부 설치하기에서 볼 수 있도록 수정&lt;/li&gt;
+&lt;li&gt;개별 문서에서는 이에 관련한 설명을 최대한 삭제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ol&gt;
+</pre>
+</div>
+<div created="20191101063301327" modified="20210311050310216" tags="HPD" title="수심 오류 찾기" tor="0">
 <pre>!!!!대축척과 소축척의 수심 및 장애물을 비교하여 오류를 찾습니다
 &lt;&lt;점선&gt;&gt;
 
 &lt;&lt;주의 &quot;이 도구는 실험적인 버전입니다.&quot;&gt;&gt;
-&lt;&lt;참고 &quot;이 도구는 QGIS 3.16 LTS 버전 기준으로 작성되어 있습니다. 아래 링크의 QGIS 를 다운받아 사용하세요.&quot;&gt;&gt;
-* https://qgis.org/downloads/QGIS-OSGeo4W-3.16.4-1-Setup-x86_64.exe
-
-&lt;&lt;참고 &quot;이 도구는 Python을 이용하며, lxml, python_geohash 패키지가 필요합니다. 아래 버튼을 눌러 패키지를 다운 받으세요.&quot;&gt;&gt;
-* &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;./Dist/Python-Package.zip&quot;&gt; Python-Package Download &lt;/$button&gt; 
-
-&lt;&lt;점선&gt;&gt;
-
+&lt;&lt;더보기 &quot;QGIS, Python이 필요합니다.  [[NoK 설치하기]]를 참고해서 설치 후 작업을 먼저 수행해 주세요.&quot;&gt;&gt;
 
 !!! 설정 하기
 &lt;&lt;&lt;
-1. QGIS 를 설치한다. 
+1. HPD Source Editor 에서 Tool -&gt; Option 을 눌러 설정창을 열어 Files and Folders를 선택한다. 
 
-2. 파이썬 추가 패키지를 다운받아 압축을 푼다. 
+2. Utilities 의 폴더를 C:\NoK\Data\HPDUtilities 로 설정한다. 
 
-3. 시작메뉴에서 OSGeo4W Shell을 검색해서 &quot;파일 위치 열기&quot;를 선택하고, 열린 폴더에서 OSGeo4W Shell 아이콘을 우클릭해서 ''관리자 권한으로 실행''
-
-4. Shell에서 추가 패키지를 풀어둔 폴더로 이동한 후 install.bat 을 실행한다.
-
-5. HPD Source Editor 에서 Tool -&gt; Option 을 눌러 설정창을 열어 Files and Folders를 선택한다. 
-
-6. Utilities 의 폴더를 C:\NoK\Data\HPDUtilities 로 설정한다. 
-
-7. HPD Source Editor 에서 View -&gt; Toolbars -&gt; Interactive를 활성화 한다.
+3. HPD Source Editor 에서 View -&gt; Toolbars -&gt; Interactive를 활성화 한다.
 &lt;&lt;&lt;
 
 
@@ -17482,9 +17486,11 @@ Caris GIS에서 Esc 를 입력하면 윈도우 시스템 경고음이 발생합�
 |!&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Enter&lt;/kbd&gt; |현재 시간 입력 ( yyyy-MM-dd hh:mm:ss ) |
 &lt;&lt;&lt;</pre>
 </div>
-<div created="20210222023006271" modified="20210222023729249" tags="Scripting" title="makeAll">
+<div created="20210222023006271" modified="20210311050448996" tags="Scripting" title="makeAll">
 <pre>!!!! 기본 편수 시 해야하는 여러 작업을 통합해둔 배치 스크립트 
 &lt;&lt;점선&gt;&gt;
+
+&lt;&lt;더보기 &quot;이 스크립트는 ODA FileConverter와 Powershell을 사용합니다. [[NoK 설치하기]]를 참고해주세요.&quot;&gt;&gt;
 
 ''일반적으로 수행하는 작업''
 
@@ -17706,7 +17712,7 @@ ENDLOCAL
 &lt;&lt;&lt;
 </pre>
 </div>
-<div created="20200502080942937" modified="20210228061525004" tags="" title="NoK 설치하기">
+<div created="20200502080942937" modified="20210311050646740" tags="" title="NoK 설치하기">
 <pre>&lt;!--
 !!!! License
 &lt;&lt;점선&gt;&gt;
@@ -17736,20 +17742,52 @@ ENDLOCAL
 
 
 
-!!!! 처음 설치하기 
+!!! 처음 설치하기 
 &lt;&lt;점선&gt;&gt;
 
 &lt;&lt;&lt;
-1. &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1R4LP0yO-j7xrY-7PLNezjTauYgRs10jd?usp=sharing&quot;&gt; NoK 다운로드 &lt;/$button&gt;
+1. &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1R4LP0yO-j7xrY-7PLNezjTauYgRs10jd?usp=sharing&quot;&gt; NoK 다운로드 &lt;/$button&gt; - NoK.exe 파일 다운로드
 
-2. 다운로드 받은 설치파일을 실행해서 NoK를 설치합니다. 
+2. 다운로드 받은 설치파일을 실행해서 NoK를 설치합니다. 가급적 기본 경로 C:\NoK에 설치해 주세요.
 
-&lt;&lt;인용 &quot;기본 설치 경로는 C:\NoK 입니다. 가급적 기본 설치 경로에 설치해 주세요.&quot; &gt;&gt;
 &lt;&lt;주의 &quot;일부 유틸리티의 경우 절대 경로를 사용합니다. 기본 설치 경로가 아닌 곳에 설치하는 경우 정상적으로 동작하지 않을 수 있습니다. &quot; &gt;&gt;
 
 &lt;&lt;&lt;
 
-!!!! 설치 취소
+
+
+
+!!! 설치 후 추가 작업
+&lt;&lt;점선&gt;&gt;
+
+&lt;&lt;&lt;
+&lt;&lt;주의 &quot;NoK의 기능을 모두 사용하기 위해서는 QGIS 3.16 LTS 버전과 파이썬 패키지를 추가로 설치해야 합니다.&quot;&gt;&gt;
+1. &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1N-GDWjrYRXpc5InkxANQ_wP5h9iz_pJQ?usp=sharing&quot;&gt; QGIS 3.16 LTS 다운로드 &lt;/$button&gt; - QGIS 폴더에 설치파일을 받아 설치하기 &lt;br&gt;
+( 공식 - https://qgis.org/downloads/QGIS-OSGeo4W-3.16.4-1-Setup-x86_64.exe )
+
+2. &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1R4LP0yO-j7xrY-7PLNezjTauYgRs10jd?usp=sharing&quot;&gt; 파이썬 패키지 다운로드 &lt;/$button&gt; - Python-Package.zip 을 받아 압축 풀어두기
+
+3. &lt;kbd&gt;Windows&lt;/kbd&gt;+&lt;kbd&gt;Q&lt;/kbd&gt;키를 누르고 OSGeo4W Shell을 검색해서 파일위치 열기 -&gt; OSGeo4W Shell 아이콘 우클릭 -&gt; 관리자 권한으로 실행
+
+4. OSGeo4W Shell에서 2에서 다운받은 패키지 폴더로 이동해서 install.bat 실행
+
+5. [[Powershell 스크립트 실행 규칙 변경]] -- 문서참조하여 실행 규칙 변경
+
+6. &lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1N-GDWjrYRXpc5InkxANQ_wP5h9iz_pJQ?usp=sharing&quot;&gt; ODA File Converter 다운로드 &lt;/$button&gt; - ODA FileConverter 폴더의 파일을 받아 설치
+&lt;&lt;&lt;
+
+!!! 업데이트 
+&lt;&lt;점선&gt;&gt;
+&lt;&lt;&lt;
+기존 설치 경로와 같은 경로에 다시 설치합니다. 
+
+&lt;&lt;주의 &quot;NoK를 다시 설치하는 경우, 기존에 설치된 파일들을 덮어씁니다. NoK에서 제공하는 배치, 스크립트 파일을 수정해서 사용하시는 경우, 백업해두세요.&quot;&gt;&gt;
+
+* [[Batch script 개인화]] -- 문서를 참고해서 수정해서 사용하세요. Private 폴더의 파일들은 업데이트시 덮어써지지 않습니다.
+
+&lt;&lt;&lt; 
+
+!!! 설치 취소
 &lt;&lt;점선&gt;&gt;
 &lt;&lt;&lt;
 1. 윈도우 레지스트리 키 ''HKCU\Software\Microsoft\Command Processor''의 ''AutoRun''값을 삭제합니다.
@@ -17757,21 +17795,10 @@ ENDLOCAL
 2. NoK 폴더의 모든 파일을 삭제합니다.
 &lt;&lt;&lt;
 
-!!!! 업데이트 
+!!! Tutorial
 &lt;&lt;점선&gt;&gt;
 &lt;&lt;&lt;
-기존 설치 경로와 같은 경로에 다시 설치합니다. 
-
-&lt;&lt;주의 &quot;NoK를 다시 설치하는 경우, 기존에 설치된 파일들을 덮어씁니다. NoK에서 제공하는 배치, 스크립트 파일을 수정해서 사용하시는 경우, 재 설치 전 백업해두세요.&quot;&gt;&gt;
-
-&lt;&lt;인용 &quot;NoK에서 제공하는 배치, 스크립트, 데이터 파일들은 직접 수정하기 보다는 다른 이름으로 복사해서 수정하시는 것을 추천합니다.&quot;&gt;&gt;
-
-&lt;&lt;&lt; 
-
-!!!! Tutorial
-&lt;&lt;점선&gt;&gt;
-&lt;&lt;&lt;
-&lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1R4LP0yO-j7xrY-7PLNezjTauYgRs10jd?usp=sharing&quot;&gt; NoK Tutorial 다운로드 &lt;/$button&gt;
+&lt;$button message=&quot;tm-open-external-window&quot; param=&quot;https://drive.google.com/drive/folders/1R4LP0yO-j7xrY-7PLNezjTauYgRs10jd?usp=sharing&quot;&gt; NoK Tutorial 다운로드 &lt;/$button&gt; - NoK_Tutorial.zip 다운로드
 &lt;&lt;&lt;</pre>
 </div>
 <div created="20200508053413364" modified="20200508053806321" tags="AutoHotkey" title="Notepad++에 AutoHotKey 스타일 추가">
@@ -17786,8 +17813,11 @@ ENDLOCAL
 3. Notepad++ 를 다시 시작 합니다. 
 &lt;&lt;&lt;</pre>
 </div>
-<div created="20200418082117516" modified="20200512063121316" title="Notice">
-<pre>!!!! 😱 으아아아 ~ 
+<div created="20200418082117516" modified="20210311051029077" title="Notice">
+<pre>!!!! 😱 으아아아 
+
+최종수정일 : &lt;$view format=&quot;date&quot; field=&quot;modified&quot; template=&quot;YYYY-0MM-0DD&quot;/&gt;
+
 &lt;&lt;점선&gt;&gt;
 
 &gt; 1. [[NoK 설치하기]]  
