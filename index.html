@@ -875,6 +875,8 @@ Error message and password prompt
 
 <li>Notice</li>
 
+<li>ORA-12154 : TNS:could not resolve the connect identifier specified</li>
+
 <li>OracleDB 세션 확인 및 강제 종료하기</li>
 
 <li>Powershell 스크립트 실행 규칙 변경</li>
@@ -14260,7 +14262,7 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200427052833934" modified="20200427052833934" title="$:/state/toc/Contents-ETC--1248118275">
 <pre>open</pre>
 </div>
-<div created="20200418111932244" modified="20210311045700098" title="$:/state/toc/Contents-ETC-1637712383">
+<div created="20200418111932244" modified="20220114054619842" title="$:/state/toc/Contents-ETC-1637712383">
 <pre>close</pre>
 </div>
 <div created="20200423073514067" modified="20210219014011407" title="$:/state/toc/Contents-ETC-263827834">
@@ -14299,8 +14301,8 @@ very-muted-foreground: #2d3038</pre>
 <div created="20200430073107498" modified="20210414040750181" title="$:/state/toc/Contents-Scripting-1637712383">
 <pre>open</pre>
 </div>
-<div created="20200425053213560" modified="20210511071838403" title="$:/state/toc/Contents-Scripting-263827834">
-<pre>close</pre>
+<div created="20200425053213560" modified="20220114050359413" title="$:/state/toc/Contents-Scripting-263827834">
+<pre>open</pre>
 </div>
 <div created="20200427052406698" modified="20200427052407498" title="$:/state/toc/Contents-Scripting-331630659">
 <pre>close</pre>
@@ -14494,7 +14496,7 @@ very-muted-foreground: #2d3038</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210513115153890" list="Notice Contents" modified="20210513115153890" title="$:/StoryList">
+<div created="20220114050013551" list="Notice Contents" modified="20220114050401121" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200430071506327" modified="20200501105137873" tags="$:/tags/TopLeftBar" title="$:/tags/TopLeftBar">
@@ -14557,11 +14559,11 @@ NoK ^^(0.1)^^
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1427&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;851&quot;
+            &quot;text&quot;: &quot;960&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -14570,7 +14572,7 @@ NoK ^^(0.1)^^
     }
 }</pre>
 </div>
-<div created="20200424025906543" modified="20210511081317651" title="$:/temp/menubarsearch">
+<div created="20200424025906543" modified="20220114050015296" title="$:/temp/menubarsearch">
 <pre></pre>
 </div>
 <div created="20200418095158068" modified="20200424070847571" title="$:/temp/NewTagName">
@@ -17931,6 +17933,37 @@ ENDLOCAL
 &lt;&lt;&lt;
 
 </pre>
+</div>
+<div created="20220114050018896" modified="20220114054607764" tags="TroubleShooting" title="ORA-12154 : TNS:could not resolve the connect identifier specified">
+<pre>!!!! [ORA-12154] TNS:could not resolve the connect identifier specified (지정된 접속 식별자를 분석할 수 없음)
+&lt;&lt;점선&gt;&gt;
+
+sqlplus나, carisbatch 사용 시 위와 같은 오류로 접속이 불가한 경우 확인 할 것 
+
+1. tnsnames.ora 파일 확인
+
+&lt;&lt;&lt;
+오라클 클라이언트 설치 경로에 network / admin 폴더에 tnsnames.ora 파일이 있는지 확인
+
+예)
+
+```
+C:\app\[사용자계정]\product\11.2.0\client_1\network\admin
+```
+
+&lt;&lt;&lt;
+
+2. TNS_ADMIN 환경변수 설정
+
+&lt;&lt;&lt;
+
+* [[%PATH% 설정]] 하기 문서 참고
+* 환경변수 : `TNS_ADMIN` 를 생성하고 이 환경 변수의 값을 tnsnames.ora  파일이 있는 경로로 지정
+
+&lt;&lt;&lt;
+
+
+&lt;&lt;&lt;</pre>
 </div>
 <div created="20200418100304819" modified="20200425055840140" tags="TroubleShooting" title="OracleDB 세션 확인 및 강제 종료하기" tor="1">
 <pre>!!!! Product 및 Paper 가 타 계정으로 계속 열려 있는 경우 강제로 해당 세션을 종료
